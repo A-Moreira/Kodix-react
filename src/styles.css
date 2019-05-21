@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+body {
+    margin: 0;
+}
+
+.App {
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto 100px;
+    max-width: 1000px;
+    font-family: "Roboto", sans-serif;
+    min-height: calc(100vh - 100px);
+}
+
+.header {
+    height: 100px;
+    width: 100%;
+    background-color: #282d30;
+}
+
+.footer {
+    height: 100px;
+    width: 100%;
+    background-color: #282d30;
+}
+
+.main-title {
+    text-align: center;
+}
+
+.logo {
+    background-image: url("img/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 100px;
+    min-height: 100px;
+}
+
+.table-title {
+    margin-bottom: 30px;
+    padding-left: 10px;
+    border-left: 3px solid #8b9497;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #f5f6f6;
+}
+
+.table-head {
+    background-color: #c4092f;
+    color: #fff;
+    text-align: left;
+    user-select: none;
+}
+
+.head-cell {
+    padding: 15px;
+}
+
+.cell {
+    padding: 15px;
+    font-size: 15px;
+    border-bottom: 1px solid #e6e9ea;
+    /* white-space: nowrap; */
+}
+
+.cell .cell-title,
+.cell-description {
+    display: block;
+    width: 100%;
+}
+
+.cell-price {
+    white-space: nowrap;
+}
+
+.cell-description {
+    font-size: 13px;
+    color: #8b9497;
+}
+
+.btn-delete {
+    height: 30px;
+    width: 90px;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    font-size: 15px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn-delete:hover {
+    background-color: #282d30;
+    color: #fff;
+}
+
+.inputs-container {
+    padding: 8px;
+    margin-bottom: 150px;
+}
+
+.inputs-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.add-car-input {
+    outline: none;
+    width: 30%;
+    height: 40px;
+    padding-left: 10px;
+    border: 1px solid #dcdcdc;
+    border-bottom: 2px solid #dcdcdc;
+    transition: 0.5s;
+    box-sizing: border-box;
+}
+
+.add-car-input:hover {
+    border-bottom: 2px solid #c4092f;
+}
+
+.add-car-input:focus {
+    border-bottom: 2px solid #000;
+}
+
+.add-car-description {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.add-car-select {
+    outline: none;
+    width: 30%;
+    height: 40px;
+    border: 1px solid #dcdcdc;
+    border-bottom: 2px solid #dcdcdc;
+    transition: 0.5s;
+}
+
+.add-car-select:hover {
+    border-bottom: 2px solid #c4092f;
+}
+
+.add-car-select:focus {
+    border-bottom: 2px solid #000;
+}
+
+.control-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.css-1pcexqc-container {
+    width: 30%;
+}
+
+.colors-container {
+    width: 30%;
+}
+
+.colors-title {
+    font-size: 12px;
+    color: #999999;
+}
+
+.colors {
+    display: flex;
+    padding: 0;
+    width: 30%;
+}
+
+.color {
+    list-style-type: none;
+}
+
+.color:hover > .label::before {
+    border: 2px solid #c4092f;
+}
+
+.radio-btn {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.radio-btn:checked + .label {
+    color: #009688;
+}
+
+.radio-btn:checked + .label::before {
+    border: 2px solid #c4092f;
+}
+
+.label::before {
+    display: inline-block;
+    content: "";
+    height: 1.125rem;
+    width: 1.125rem;
+    border-radius: 50%;
+    transition: all 0.25s linear;
+    margin-right: 10px;
+}
+
+.color-white::before {
+    background-color: #fff;
+    border: 2px solid #cbcbcc;
+}
+
+.color-black::before {
+    background-color: #000;
+    border: 2px solid #000;
+}
+
+.color-grey::before {
+    background-color: #cbcbcc;
+    border: 2px solid #cbcbcc;
+}
+
+.color-red::before {
+    background-color: #c4092f;
+    border: 2px solid #c4092f;
+}
+
+.color-green::before {
+    background-color: #88c504;
+    border: 2px solid #88c504;
+}
+
+.send-btn {
+    width: 30%;
+    height: 40px;
+    background-color: #c4092f;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.send-btn:hover {
+    background-color: #ad092b;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        background-size: 85%;
+    }
+
+    .container {
+        margin: 0 auto;
+    }
+
+    .inputs-row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .add-car-input,
+    .css-1pcexqc-container,
+    .send-btn {
+        width: 45%;
+    }
+
+    #title {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .add-car-description,
+    .colors-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .control-row {
+        flex-wrap: wrap;
+    }
+
+    .label::before {
+        margin-right: 20px;
+    }
+
+    .table-block {
+        display: none;
+    }
+
+    .mobile-block {
+        display: block;
+    }
+
+    .inputs-container {
+        margin-bottom: 50px;
+    }
+
+    .car-item {
+        font-size: 14px;
+        background-color: #f5f6f6;
+        list-style-type: none;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .row-title {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .cell-title {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 20%;
+    }
+    .cell-title:first-child {
+        width: 60%;
+    }
+
+    .cell-title,
+    .cell-description {
+        margin-bottom: 10px;
+    }
+
+    .row-control {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .row-control-status {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 481px) {
+    .table-block {
+        display: block;
+    }
+
+    .mobile-block {
+        display: none;
+    }
+}
